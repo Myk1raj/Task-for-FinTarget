@@ -1,0 +1,19 @@
+{
+  "name": "task-queue",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "- Node.js\r - Redis",
+  "dependencies": {
+    "bull": "^4.16.3",
+    "cluster": "^0.7.7",
+    "express": "^4.21.0",
+    "express-rate-limit": "^7.4.1",
+    "redis": "^4.7.0"
+  }
+}
