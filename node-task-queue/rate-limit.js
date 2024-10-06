@@ -28,7 +28,7 @@ const secondLimiter =  (req,myk) => {
 
 const taskLimiter =  (req,myk) => {
     const userId = req.body.user_id;
-    const oneMinuteInMillis = 20000; 
+    const oneMinuteInMillis = 60000; 
     const now = Date.now();
     if (userRequests_min[userId]) {
         const now = Date.now();
@@ -37,7 +37,7 @@ const taskLimiter =  (req,myk) => {
     } else {
         userRequests_min[userId] = [];
     }
-    if (userRequests_min[userId].length >= 5) {
+    if (userRequests_min[userId].length >= 20) {
         return true; 
     }
     if(myk){

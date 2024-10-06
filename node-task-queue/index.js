@@ -34,7 +34,7 @@ if (cluster.isMaster) {
         if (taskLimitReached) {
             try {
                 performWhileLoop_min(req, userId);
-                return res.status(202).send(`Task queued for user ${userId} (reason: too many requests in 20 sec)`);
+                return res.status(202).send(`Task queued for user ${userId} (reason: too many requests in one minute)`);
             } catch (err) {
                 console.error(`Error adding task for user ${userId}:`, err);
                 return res.status(500).send("Internal Server Error");
